@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "scope_id": "sign-in-popup-visible-frame-v1",
+  "regression_budget": 0,
+  "threshold": 2,
+  "regions": [
+    {"id": "top-rim", "box": [0, 0, 700, 64], "evidence_class": "non_identifiable", "strict_pixel_gate": false, "iteration_role": "target"},
+    {"id": "header-outer-middle", "box": [390, 0, 930, 190], "evidence_class": "non_identifiable", "strict_pixel_gate": false, "iteration_role": "target"},
+    {"id": "header", "box": [24, 32, 930, 332], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "header-curve", "box": [464, 32, 649, 279], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "target"},
+    {"id": "green-surface", "box": [680, 112, 946, 279], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "target"},
+    {"id": "summary", "box": [24, 279, 930, 406], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "reward-grid", "box": [59, 406, 896, 991], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "footer", "box": [59, 1031, 896, 1273], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "body-left-rim", "box": [8, 263, 42, 1294], "evidence_class": "non_identifiable", "strict_pixel_gate": false, "iteration_role": "target"},
+    {"id": "body-right-rim", "box": [915, 263, 951, 1294], "evidence_class": "non_identifiable", "strict_pixel_gate": false, "iteration_role": "target"},
+    {"id": "body-bottom-rim", "box": [10, 1260, 946, 1305], "evidence_class": "non_identifiable", "strict_pixel_gate": false, "iteration_role": "target"},
+    {"id": "close-control", "box": [404, 1352, 550, 1493], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"}
+  ],
+  "elements": [
+    {"id": "header-title", "box": [44, 67, 584, 237], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "day1-card", "box": [59, 406, 267, 689], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "day2-card", "box": [275, 406, 483, 689], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "day3-card", "box": [489, 406, 697, 689], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "day4-card", "box": [703, 406, 911, 689], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "day7-card", "box": [489, 708, 911, 991], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "rare-badge", "box": [379, 406, 470, 462], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "target"},
+    {"id": "grand-badge", "box": [804, 708, 898, 777], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "target"},
+    {"id": "claim-button", "box": [61, 1031, 898, 1170], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "reminder", "box": [329, 1196, 626, 1260], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"},
+    {"id": "close-button", "box": [417, 1368, 542, 1493], "evidence_class": "exact", "strict_pixel_gate": true, "iteration_role": "guard"}
+  ]
+}

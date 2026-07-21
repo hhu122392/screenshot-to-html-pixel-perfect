@@ -1,0 +1,17 @@
+{
+  "delivery_scope": "visible_frame",
+  "source_files": [
+    {
+      "path": "demo/reference-full.png",
+      "sha256": "a9be48d066ced95b010fb2897e250b74e8ff258a694ca9310fd82a53b17c6dde",
+      "covers": "Complete visible open state of the sign-in popup; the page behind it is excluded from the implementation scope."
+    }
+  ],
+  "continuations": [],
+  "unknowns": [
+    {"id": "close-result", "resolved": false, "reason": "No source frame shows the page after closing."},
+    {"id": "claim-result", "resolved": false, "reason": "No source frame shows the result after claiming."},
+    {"id": "reminder-off-state", "resolved": false, "reason": "The source only proves the checked reminder state."}
+  ],
+  "clipped_assets": []
+}

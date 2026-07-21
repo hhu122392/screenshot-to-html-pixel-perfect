@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "source": "demo/reference-full.png",
+  "component_id": "sign-in-popup",
+  "evidence_limitations": [
+    {"id": "top-rim", "evidence_class": "non_identifiable", "reason": "The source rim is already blended with an excluded page background; foreground RGB and Alpha are not independently known.", "strict_pixel_claim_allowed": false},
+    {"id": "header-outer-middle", "evidence_class": "non_identifiable", "reason": "The calendar protrusion and translucent rim are available only as one flattened composite.", "strict_pixel_claim_allowed": false},
+    {"id": "body-left-rim", "evidence_class": "non_identifiable", "reason": "The left rim covers changing room-list pixels in the source screenshot.", "strict_pixel_claim_allowed": false},
+    {"id": "body-right-rim", "evidence_class": "non_identifiable", "reason": "The right rim covers changing room-list pixels in the source screenshot.", "strict_pixel_claim_allowed": false},
+    {"id": "body-bottom-rim", "evidence_class": "non_identifiable", "reason": "The bottom rim covers changing room-list pixels in the source screenshot.", "strict_pixel_claim_allowed": false}
+  ],
+  "layers": [
+    {"id": "stage", "kind": "dom", "owner": "viewport", "z_order": 0, "clip_owner": null, "protrudes": false, "outer_contour_role": "none", "compositing": "opaque"},
+    {"id": "promo-surface", "kind": "svg", "owner": "popup-shell", "z_order": 10, "clip_owner": null, "protrudes": true, "outer_contour_role": "member", "compositing": "recoverable"},
+    {"id": "header-calendar", "kind": "raster", "owner": "promo-surface", "z_order": 20, "clip_owner": null, "protrudes": true, "outer_contour_role": "member", "compositing": "true_alpha"},
+    {"id": "promo-outer-rim", "kind": "effect", "owner": "popup-shell", "z_order": 5, "clip_owner": null, "protrudes": true, "outer_contour_role": "backing", "compositing": "non_identifiable"},
+    {"id": "dialog-body", "kind": "dom", "owner": "popup-shell", "z_order": 30, "clip_owner": null, "protrudes": false, "outer_contour_role": "member", "compositing": "opaque"},
+    {"id": "body-rim", "kind": "effect", "owner": "popup-shell", "z_order": 29, "clip_owner": null, "protrudes": true, "outer_contour_role": "backing", "compositing": "non_identifiable"},
+    {"id": "reward-grid", "kind": "dom", "owner": "dialog-body", "z_order": 40, "clip_owner": "dialog-body", "protrudes": false, "outer_contour_role": "none", "compositing": "opaque"},
+    {"id": "close-button", "kind": "dom", "owner": "popup-shell", "z_order": 50, "clip_owner": null, "protrudes": true, "outer_contour_role": "member", "compositing": "true_alpha"}
+  ],
+  "contours": [
+    {"id": "promo-composite-rim", "members": ["promo-surface", "header-calendar"], "primitive": "outer_ring", "openings": ["calendar-left-concave-opening"], "internal_seams_excluded": ["yellow-calendar-seam", "calendar-green-seam"]},
+    {"id": "dialog-body-rim", "members": ["dialog-body"], "primitive": "outer_ring", "openings": [], "internal_seams_excluded": []},
+    {"id": "close-control-ring", "members": ["close-button"], "primitive": "stroke", "openings": ["transparent-center"], "internal_seams_excluded": []}
+  ]
+}

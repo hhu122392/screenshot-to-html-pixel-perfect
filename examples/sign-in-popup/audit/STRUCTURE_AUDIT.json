@@ -1,0 +1,33 @@
+{
+  "url": "http://127.0.0.1:4198/?audit=1",
+  "viewport": {"width": 1179, "height": 2556},
+  "live_text": [
+    {"id": "promo-title", "selector": ".promo-title", "text": "签到有礼", "visibility": "fully-visible"},
+    {"id": "promo-subtitle", "selector": ".promo-subtitle", "text": "SIGN IN PROLI", "visibility": "fully-visible"},
+    {"id": "signed-prefix", "selector": ".signed-prefix", "text": "已签", "visibility": "fully-visible"},
+    {"id": "signed-days", "selector": ".signed-days", "text": "1天", "visibility": "fully-visible"},
+    {"id": "streak-copy", "selector": ".streak-copy", "text": "连续签到7天奖励更丰厚", "visibility": "fully-visible"},
+    {"id": "claim-label", "selector": ".claim-button", "text": "领取奖励", "visibility": "fully-visible"},
+    {"id": "reminder-label", "selector": ".reminder-label", "text": "提醒我签到", "visibility": "fully-visible"}
+  ],
+  "collections": [
+    {
+      "id": "reward-cards",
+      "selector": ".reward-card",
+      "expected_count": 7,
+      "visibility": "fully-visible",
+      "required_children": [
+        {"selector": ".day-badge", "visibility": "dom"},
+        {"selector": ".reward-art", "visibility": "fully-visible"},
+        {"selector": ".reward-name", "visibility": "fully-visible"}
+      ]
+    }
+  ],
+  "raster_policy": {
+    "max_rendered_area_ratio": 0.08,
+    "allow_selectors": [],
+    "reject_overlap_with_live_text": true,
+    "allow_overlap_selectors": [".header-calendar-art"],
+    "forbidden_source_patterns": ["reference", "screenshot", "section-slice", "card-slice"]
+  }
+}

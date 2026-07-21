@@ -1,0 +1,16 @@
+{
+  "delivery_scope": "visible_frame",
+  "strict_pixel_passed": false,
+  "threshold": 2,
+  "full_image_mean_absolute_channel_difference": 5.458677,
+  "full_image_changed_pixels": 417163,
+  "full_image_total_pixels": 1431787,
+  "structure": {"passed": true},
+  "alpha_assets": {"passed": true, "passed_assets": 5, "total_assets": 5, "source_rgb_mismatches": 0},
+  "interactions": {"passed": true, "passed_scenarios": 3, "total_scenarios": 3, "browser_errors": 0},
+  "responsive": {"passed": true, "passed_viewports": 3, "total_viewports": 3, "viewports": ["360x780", "390x846", "430x932"]},
+  "p0_count": 0,
+  "p1_count": 1,
+  "evidence_limited_regions": ["top-rim", "header-outer-middle", "body-left-rim", "body-right-rim", "body-bottom-rim"],
+  "note": "This case is published as an audited reconstruction and postmortem. It does not claim a strict 1:1 pixel pass."
+}

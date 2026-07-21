@@ -16,6 +16,21 @@ A Codex Skill for reconstructing screenshots, GIFs, and recordings with reusable
 
 Read [SKILL.md](SKILL.md) for the complete workflow and hard gates.
 
+## Audited case study
+
+### Sign-in reward popup
+
+This runnable vanilla HTML/CSS/JS example demonstrates the full feedback loop behind the layer-topology and compositing gates: a translucent rim around a combined silhouette, a protruding calendar, preserved concave openings, and distinct rare/grand-prize badges.
+
+![Sign-in reward popup demo](examples/sign-in-popup/demo/mobile-preview.png)
+
+- [Open the case and local demo instructions](examples/sign-in-popup/README.md)
+- Scope: `visible_frame`; the page background is excluded.
+- Verified: DOM/raster boundary passed, Alpha assets 5/5, interactions 3/3, responsive viewports 3/3.
+- Strict pixel status: **failed**. Scoped popup MAE is `5.458677` against the required `<2`; original fonts, vector header layers, and recoverable translucent source layers were unavailable.
+
+The case is intentionally published with its failed strict status and comparison evidence. It shows why a screenshot reconstruction needs explicit layer topology, evidence limits, before-state captures, and target/guard region audits.
+
 ## Repository layout
 
 - `SKILL.md` / `SKILL.zh-CN.md`: English and Chinese Skill instructions.
@@ -23,6 +38,7 @@ Read [SKILL.md](SKILL.md) for the complete workflow and hard gates.
 - `assets/templates/`: bilingual evidence templates and machine-readable audit specifications.
 - `scripts/`: reference analysis, true-alpha extraction, browser capture, structure/reachability checks, visual/frame comparison, and final delivery validation.
 - `tests/`: regression tests and browser fixtures.
+- `examples/`: runnable, evidence-backed reconstruction cases.
 - `agents/openai.yaml`: Codex Skill interface metadata.
 
 ## Local validation
