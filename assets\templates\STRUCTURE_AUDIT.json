@@ -1,0 +1,32 @@
+{
+  "url": "http://127.0.0.1:8000/?audit=1",
+  "viewport": {"width": 390, "height": 844},
+  "live_text": [
+    {"id": "page-title", "selector": ".page-title", "text": "Exact live title", "visibility": "fully-visible"}
+  ],
+  "collections": [
+    {
+      "id": "repeated-rows",
+      "selector": ".row",
+      "expected_count": 3,
+      "visibility": "dom",
+      "required_children": [
+        {"selector": ".row-title", "visibility": "dom"},
+        {"selector": ".row-description", "visibility": "dom"},
+        {"selector": ".row-action", "visibility": "dom"}
+      ]
+    }
+  ],
+  "raster_policy": {
+    "max_rendered_area_ratio": 0.08,
+    "allow_selectors": [],
+    "reject_overlap_with_live_text": true,
+    "allow_overlap_selectors": [],
+    "forbidden_source_patterns": [
+      "reference",
+      "screenshot",
+      "section-slice",
+      "card-slice"
+    ]
+  }
+}

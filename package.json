@@ -1,0 +1,13 @@
+{
+  "name": "screenshot-to-html-pixel-perfect-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Validation tools for the Screenshot to HTML Pixel Perfect Codex Skill",
+  "scripts": {
+    "test": "python -m unittest discover -s tests -v"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.0"
+  }
+}
+

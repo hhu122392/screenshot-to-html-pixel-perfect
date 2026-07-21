@@ -1,0 +1,8 @@
+{
+  "declared_frame_count": 3,
+  "frames": [
+    {"index": 0, "time_ms": 0},
+    {"index": 1, "time_ms": 500},
+    {"index": 2, "time_ms": 1000}
+  ]
+}

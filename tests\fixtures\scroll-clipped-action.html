@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    .sheet { width: min(100%, 390px); height: 100%; margin: 0 auto; }
+    .sheet-header { height: 96px; display: grid; place-items: center; }
+    .task-scroll { height: calc(100% - 96px); overflow-y: auto; touch-action: pan-y; }
+    .task-row { position: relative; min-height: 180px; margin: 8px; padding: 18px; border: 1px solid #ddd; border-radius: 16px; }
+    .task-row:last-child { overflow: hidden; }
+    .task-row:last-child .task-action { position: absolute; top: 164px; height: 44px; }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="sheet-header">固定标题</header>
+    <section class="task-scroll">
+      <article class="task-row"><h2 class="task-title">任务 1</h2><button class="task-action">完成 1</button></article>
+      <article class="task-row"><h2 class="task-title">任务 2</h2><button class="task-action">完成 2</button></article>
+      <article class="task-row"><h2 class="task-title">任务 3</h2><button class="task-action">完成 3</button></article>
+      <article class="task-row"><h2 class="task-title">任务 4</h2><button class="task-action">完成 4</button></article>
+      <article class="task-row"><h2 class="task-title">任务 5</h2><button class="task-action">完成 5</button></article>
+      <article class="task-row"><h2 class="task-title">任务 6</h2><button class="task-action">完成 6</button></article>
+    </section>
+  </main>
+</body>
+</html>

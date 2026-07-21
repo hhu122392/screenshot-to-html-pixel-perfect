@@ -1,0 +1,29 @@
+{
+  "url": "http://127.0.0.1:4173/",
+  "viewport": {"width": 390, "height": 844},
+  "scenarios": [
+    {
+      "id": "primary-action",
+      "steps": [
+        {"action": "click", "selector": "[data-action='primary']"}
+      ],
+      "assertions": [
+        {"type": "visible", "selector": "[data-state='result']"}
+      ]
+    },
+    {
+      "id": "reach-last-required-action",
+      "viewport": {"width": 390, "height": 844, "is_mobile": true, "has_touch": true},
+      "steps": [
+        {"action": "swipe", "selector": ".scroll-owner", "direction": "up", "distance": 520},
+        {"action": "scrollSelector", "selector": ".scroll-owner", "position": "end"},
+        {"action": "click", "selector": ".repeated-row:last-child .row-action"}
+      ],
+      "assertions": [
+        {"type": "scrollTop", "selector": ".scroll-owner", "min": 1},
+        {"type": "fullyVisible", "selector": ".repeated-row:last-child"},
+        {"type": "visible", "selector": "[data-state='last-action-result']"}
+      ]
+    }
+  ]
+}

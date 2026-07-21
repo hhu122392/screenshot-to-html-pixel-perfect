@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scrollable task sheet fixture</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; }
+    body { font-family: sans-serif; background: #eee; }
+    .sheet { width: min(100%, 390px); height: 100%; margin: 0 auto; background: white; }
+    .sheet-header { height: 96px; display: grid; place-items: center; background: #ffd36b; }
+    .task-scroll { height: calc(100% - 96px); overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; }
+    .task-row { min-height: 180px; margin: 8px; padding: 18px; border: 1px solid #ddd; border-radius: 16px; }
+    .task-action { display: inline-grid; min-width: 96px; min-height: 44px; place-items: center; }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="sheet-header">固定标题</header>
+    <section class="task-scroll" aria-label="任务列表">
+      <article class="task-row"><h2 class="task-title">任务 1</h2><button class="task-action">完成 1</button></article>
+      <article class="task-row"><h2 class="task-title">任务 2</h2><button class="task-action">完成 2</button></article>
+      <article class="task-row"><h2 class="task-title">任务 3</h2><button class="task-action">完成 3</button></article>
+      <article class="task-row"><h2 class="task-title">任务 4</h2><button class="task-action">完成 4</button></article>
+      <article class="task-row"><h2 class="task-title">任务 5</h2><button class="task-action">完成 5</button></article>
+      <article class="task-row"><h2 class="task-title">任务 6</h2><button class="task-action" data-action="last">完成 6</button></article>
+    </section>
+  </main>
+  <output id="result"></output>
+  <script>
+    document.addEventListener('click', (event) => {
+      if (event.target.matches('[data-action="last"]')) document.querySelector('#result').textContent = 'last-clicked';
+    });
+  </script>
+</body>
+</html>

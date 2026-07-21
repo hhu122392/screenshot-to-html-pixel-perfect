@@ -1,0 +1,18 @@
+{
+  "url": "http://127.0.0.1:4173/?audit=1",
+  "viewports": [
+    {"id": "desktop-wheel", "width": 658, "height": 1124, "method": "wheel"},
+    {"id": "mobile-touch", "width": 390, "height": 844, "method": "touch", "is_mobile": true, "has_touch": true}
+  ],
+  "contracts": [
+    {
+      "id": "primary-list",
+      "scroll_selector": ".scroll-owner",
+      "item_selector": ".repeated-row",
+      "expected_count": 6,
+      "required_children": [".row-title", ".row-description", ".row-action"],
+      "fixed_selectors": [".fixed-header"],
+      "min_scroll_range": 1
+    }
+  ]
+}

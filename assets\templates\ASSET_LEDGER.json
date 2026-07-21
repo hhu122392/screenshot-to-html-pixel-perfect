@@ -1,0 +1,18 @@
+{
+  "reference_file": "reference.png",
+  "reference_sha256": "replace-with-source-hash",
+  "checkerboard_used": false,
+  "assets": [
+    {
+      "file": "subject.png",
+      "source_box": [0, 0, 100, 100],
+      "kind": "source_rgb_alpha_mask",
+      "role": "isolated_artwork",
+      "alpha_method": "mask",
+      "source_composited": false,
+      "contains_live_text": false,
+      "contains_layout_container": false,
+      "rgb_mismatch_count": 0
+    }
+  ]
+}

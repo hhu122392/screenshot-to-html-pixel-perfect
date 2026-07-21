@@ -1,0 +1,9 @@
+{
+  "threshold": 2,
+  "regions": [
+    {"id": "hero", "box": [0, 0, 1080, 600]}
+  ],
+  "elements": [
+    {"id": "primary-cta", "box": [700, 500, 1000, 620]}
+  ]
+}

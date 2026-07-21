@@ -1,0 +1,8 @@
+{
+  "clip": {"start_ms": 0, "end_ms": 1000, "declared_frame_count": 0},
+  "interaction_anchor": {"scenario": "primary-action", "time_zero": "after-click"},
+  "frames": [
+    {"index": 0, "time_ms": 0}
+  ],
+  "actors": []
+}

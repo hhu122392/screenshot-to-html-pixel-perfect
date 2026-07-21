@@ -1,0 +1,10 @@
+{
+  "passed": false,
+  "threshold": 2,
+  "reports": [],
+  "failed_reports": [],
+  "p0_count": 0,
+  "p1_count": 0,
+  "unrun_checks": [],
+  "global_install_approved": false
+}

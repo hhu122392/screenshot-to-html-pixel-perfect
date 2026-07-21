@@ -1,0 +1,17 @@
+{
+  "source": {
+    "path": "reference.png",
+    "sha256": "replace-with-source-hash",
+    "kind": "static_image",
+    "width": 1080,
+    "height": 2337,
+    "mode": "RGB",
+    "declared_frame_count": 1,
+    "decoded_frame_count": 1,
+    "fps": null,
+    "duration_ms": 0
+  },
+  "palette": [],
+  "states": [],
+  "viewports": []
+}

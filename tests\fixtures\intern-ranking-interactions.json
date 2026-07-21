@@ -1,0 +1,26 @@
+{
+  "url": "http://127.0.0.1:8765/?freeze=1",
+  "viewport": {"width": 390, "height": 844},
+  "scenarios": [
+    {
+      "id": "open-rules",
+      "steps": [
+        {"action": "click", "selector": "[data-action='rules']"}
+      ],
+      "assertions": [
+        {"type": "visible", "selector": "#toast.is-visible"},
+        {"type": "text", "selector": "#toast", "value": "活动规则入口已打开"}
+      ]
+    },
+    {
+      "id": "invest-first-ranked-person",
+      "steps": [
+        {"action": "click", "selector": "[data-action='invest'][data-name='朱光晔']"}
+      ],
+      "assertions": [
+        {"type": "visible", "selector": "#toast.is-visible"},
+        {"type": "text", "selector": "#toast", "value": "已选择投资朱光晔"}
+      ]
+    }
+  ]
+}

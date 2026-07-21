@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deterministic motion audit fixture</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 320px; height: 180px; margin: 0; overflow: hidden; background: #0a224b; }
+      .track { position: absolute; left: 40px; top: 68px; width: 240px; height: 44px; border-radius: 22px; background: #163e77; }
+      .actor { position: absolute; left: 48px; top: 72px; width: 36px; height: 36px; border-radius: 50%; background: #ff385d; box-shadow: 0 0 18px #71caff; }
+    </style>
+  </head>
+  <body>
+    <div class="track"></div>
+    <div id="actor" class="actor"></div>
+    <script>
+      const actor = document.querySelector('#actor');
+      window.__setAuditTime = (milliseconds) => {
+        const progress = Math.max(0, Math.min(1, milliseconds / 1000));
+        actor.style.transform = `translateX(${Math.round(progress * 192)}px) scale(${(1 + progress * 0.25).toFixed(3)})`;
+        actor.style.opacity = String((0.5 + progress * 0.5).toFixed(3));
+        document.body.dataset.auditTime = String(milliseconds);
+      };
+      window.__setAuditTime(0);
+    </script>
+  </body>
+</html>

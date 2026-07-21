@@ -42,4 +42,3 @@ Run each script with `--help` for its exact command contract. Generated audit ev
 
 Copy this repository into the Codex global Skill directory as `screenshot-to-html-pixel-perfect`, or install the repository with the Codex Skill installer. Restart Codex after installation so the Skill catalog is refreshed.
 
-

@@ -1,0 +1,11 @@
+{
+  "delivery_scope": "full_component",
+  "source_files": [
+    {"path": "reference.png", "sha256": "", "covers": "initial viewport"}
+  ],
+  "continuations": [
+    {"id": "primary-scroll-region", "status": "complete", "evidence": ["reference.png"]}
+  ],
+  "unknowns": [],
+  "clipped_assets": []
+}
