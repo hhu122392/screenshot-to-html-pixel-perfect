@@ -22,7 +22,11 @@ Read [SKILL.md](SKILL.md) for the complete workflow and hard gates.
 
 This runnable vanilla HTML/CSS/JS example demonstrates the full feedback loop behind the layer-topology and compositing gates: a translucent rim around a combined silhouette, a protruding calendar, preserved concave openings, and distinct rare/grand-prize badges.
 
-![Sign-in reward popup demo](examples/sign-in-popup/demo/mobile-preview.png)
+| Original screenshot | Implemented with this Skill |
+|---|---|
+| <img src="examples/sign-in-popup/demo/reference-full.png" alt="Original sign-in popup screenshot" width="390"> | <img src="examples/sign-in-popup/demo/mobile-preview.png" alt="Sign-in popup implemented with this Skill" width="390"> |
+
+The left column keeps the complete source screenshot as evidence. The right column implements only the popup on a neutral gray stage.
 
 - [Open the case and local demo instructions](examples/sign-in-popup/README.md)
 - Scope: `visible_frame`; the page background is excluded.

@@ -6,7 +6,11 @@ This example reconstructs only the sign-in popup; the page behind it is excluded
 
 > Audit result: structure, Alpha assets, interactions, and responsive checks passed. The strict pixel gate did not pass: scoped popup MAE is `5.458677`, above the required `<2`. This is an audited implementation and postmortem, not a strict 1:1 completion claim.
 
-![Mobile sign-in popup demo](demo/mobile-preview.png)
+| Original screenshot | Implemented with this Skill |
+|---|---|
+| <img src="demo/reference-full.png" alt="Original sign-in popup screenshot" width="390"> | <img src="demo/mobile-preview.png" alt="Sign-in popup implemented with this Skill" width="390"> |
+
+The left column keeps the complete source screenshot as evidence. The right column implements only the popup on a neutral gray stage.
 
 ## Run locally
 

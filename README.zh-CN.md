@@ -22,7 +22,11 @@
 
 这个可运行的原生 HTML/CSS/JavaScript 案例展示了本次 SKILL 迭代的完整问题链：组合轮廓的半透明外沿、凸出日历、需要保留的凹口，以及不能共用同一形状的“稀有”和“大奖”角标。
 
-![签到奖励弹窗演示](examples/sign-in-popup/demo/mobile-preview.png)
+| 原始截图 | 本 SKILL 实现 |
+|---|---|
+| <img src="examples/sign-in-popup/demo/reference-full.png" alt="签到弹窗原始截图" width="390"> | <img src="examples/sign-in-popup/demo/mobile-preview.png" alt="本 SKILL 实现的签到弹窗" width="390"> |
+
+左侧保留完整原图作为来源证据；右侧只实现签到弹窗，背景使用中性灰舞台。
 
 - [查看案例说明和本地演示](examples/sign-in-popup/README.zh-CN.md)
 - 范围：`visible_frame`，原页面背景不在实现范围。
