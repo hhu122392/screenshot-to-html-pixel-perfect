@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="only light" />
+    <title>签到弹窗复刻</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage" aria-label="签到弹窗演示舞台">
+      <section class="popup-shell" aria-label="签到有礼弹窗" role="dialog" aria-modal="true">
+        <div class="body-rim" aria-hidden="true"></div>
+        <svg class="promo-rim" viewBox="0 0 906 330" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <filter id="promo-outline-filter" filterUnits="userSpaceOnUse" x="-40" y="-40" width="986" height="410" color-interpolation-filters="sRGB">
+              <feMorphology in="SourceAlpha" operator="dilate" radius="14" result="expanded" />
+              <feGaussianBlur in="expanded" stdDeviation="2" result="soft-expanded" />
+              <feComposite in="soft-expanded" in2="SourceAlpha" operator="out" result="outer-ring" />
+              <feFlood flood-color="#e1e7e5" flood-opacity="0.22" result="rim-color" />
+              <feComposite in="rim-color" in2="outer-ring" operator="in" />
+            </filter>
+            <linearGradient id="promo-middle-fade" gradientUnits="userSpaceOnUse" x1="380" y1="0" x2="480" y2="0">
+              <stop offset="0" stop-color="#000" />
+              <stop offset="1" stop-color="#fff" />
+            </linearGradient>
+            <mask id="promo-middle-mask" maskUnits="userSpaceOnUse" x="340" y="-40" width="606" height="410">
+              <rect x="340" y="-40" width="606" height="410" fill="url(#promo-middle-fade)" />
+            </mask>
+          </defs>
+          <path class="promo-rim-edge" d="M0 330V64C0 29 29 0 64 0H430" />
+          <g class="promo-rim-middle" mask="url(#promo-middle-mask)" filter="url(#promo-outline-filter)">
+            <path d="M64 0H430C463 0 454 25 480 51C500 71 521 83 540 92C562 103 574 120 579 139C590 180 582 250 558 330H0V64C0 29 29 0 64 0Z" />
+            <path d="M516 77C561 68 617 83 662 120C698 150 716 202 706 330H535C552 272 567 209 559 164C553 126 536 98 516 77Z" />
+            <image href="assets/header-calendar.png" x="476" y="-7" width="436" height="254" preserveAspectRatio="xMidYMid meet" />
+          </g>
+          <path class="promo-rim-edge promo-rim-green" d="M674 94H831C873 94 906 127 906 169V330" />
+        </svg>
+        <header class="promo-header">
+          <svg class="header-shapes" viewBox="0 0 906 330" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="yellowSurface" x1="0" y1="0" x2="1" y2="0.3">
+                <stop offset="0" stop-color="#f4b43e" />
+                <stop offset="0.34" stop-color="#f6c143" />
+                <stop offset="0.69" stop-color="#f8d34a" />
+                <stop offset="1" stop-color="#f3e653" />
+              </linearGradient>
+              <linearGradient id="greenSurface" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d6ef9d" />
+                <stop offset="0.42" stop-color="#bdeea3" />
+                <stop offset="0.7" stop-color="#9ce9a6" />
+                <stop offset="1" stop-color="#88e5a5" />
+              </linearGradient>
+              <linearGradient id="greenSheen" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#efffc4" stop-opacity="0" />
+                <stop offset="0.26" stop-color="#efffc4" stop-opacity="0.02" />
+                <stop offset="0.45" stop-color="#efffc4" stop-opacity="0.62" />
+                <stop offset="0.6" stop-color="#efffc4" stop-opacity="0.52" />
+                <stop offset="0.78" stop-color="#efffc4" stop-opacity="0.04" />
+                <stop offset="1" stop-color="#efffc4" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <path class="header-yellow-shape" d="M64 0H430C463 0 454 25 480 51C500 71 521 83 540 92C562 103 574 120 579 139C590 180 582 250 558 330H0V64C0 29 29 0 64 0Z" fill="url(#yellowSurface)" />
+            <path class="header-yellow-bridge" d="M516 77C561 68 617 83 662 120C698 150 716 202 706 330H535C552 272 567 209 559 164C553 126 536 98 516 77Z" />
+            <path class="header-yellow-glow" d="M224 -35H337L458 330H352Z" />
+            <path class="header-green-shape" d="M674 94H831C873 94 906 127 906 169V330H604C623 286 633 248 629 211C625 166 642 111 674 94Z" fill="url(#greenSurface)" />
+            <path class="header-green-sheen" d="M674 94H831C873 94 906 127 906 169V330H604C623 286 633 248 629 211C625 166 642 111 674 94Z" fill="url(#greenSheen)" />
+          </svg>
+          <div class="promo-copy">
+            <h1 class="promo-title">签到有礼</h1>
+            <p class="promo-subtitle">SIGN IN PROLI</p>
+          </div>
+          <img class="header-calendar-art" src="assets/header-calendar.png" alt="" />
+        </header>
+
+        <section class="dialog-body">
+          <div class="status-row">
+            <p class="signed-copy">
+              <span class="signed-prefix">已签</span><span class="signed-days"><em>1</em>天</span>
+            </p>
+            <p class="streak-copy">连续签到7天奖励更丰厚</p>
+            <span class="help-mark" aria-label="签到规则说明">?</span>
+          </div>
+
+          <div class="reward-grid" aria-label="七天签到奖励"></div>
+
+          <button class="claim-button" type="button"><span>领取奖励</span></button>
+
+          <button class="reminder-toggle" type="button" role="switch" aria-checked="true">
+            <span class="reminder-check" aria-hidden="true"></span>
+            <span class="reminder-label">提醒我签到</span>
+          </button>
+        </section>
+
+        <button class="close-button" type="button" aria-label="关闭签到弹窗">
+          <span aria-hidden="true"></span>
+        </button>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

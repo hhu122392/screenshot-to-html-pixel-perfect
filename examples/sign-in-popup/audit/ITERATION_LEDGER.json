@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "core_scope": {
+    "id": "sign-in-popup-visible-frame-v1",
+    "reference_sha256": "a9be48d066ced95b010fb2897e250b74e8ff258a694ca9310fd82a53b17c6dde",
+    "audit_map_sha256": "eb600cd2634d08ff04adcb816335544d66b52bc4b1baa4550d2c62caee437359",
+    "scope_mask_sha256": "78f8618c62f589b30f9f085eb070ab2ae4aba200977f6d9eedba72c9d2d23743"
+  },
+  "feedback_regions": [
+    {"audit_region_id": "header-outer-middle", "requirement": "Extend the translucent outer rim across the protruding calendar without filling the concave opening.", "expected_direction": "Add only the missing exterior ring pixels.", "evidence_class": "non_identifiable", "baseline_candidate": "demo/baseline-before-final-rim.png"},
+    {"audit_region_id": "body-left-rim", "requirement": "Keep a continuous translucent rim around the complete dialog body.", "expected_direction": "Restore the missing side rim without moving body content.", "evidence_class": "non_identifiable", "baseline_candidate": "demo/baseline-before-final-rim.png"},
+    {"audit_region_id": "body-right-rim", "requirement": "Keep a continuous translucent rim around the complete dialog body.", "expected_direction": "Restore the missing side rim without moving body content.", "evidence_class": "non_identifiable", "baseline_candidate": "demo/baseline-before-final-rim.png"},
+    {"audit_region_id": "header-curve", "requirement": "Replace the hard triangular cut with the source-proven curved connection.", "expected_direction": "Reduce hard seam pixels while preserving the opening.", "evidence_class": "exact", "baseline_candidate": "demo/baseline-before-final-rim.png"},
+    {"audit_region_id": "rare-badge", "requirement": "Use the rare-card corner tag geometry instead of a shared rectangular badge.", "expected_direction": "Match the rounded corner tag silhouette.", "evidence_class": "exact", "baseline_candidate": "demo/baseline-before-final-rim.png"},
+    {"audit_region_id": "grand-badge", "requirement": "Use an independent flag badge with a folded tail.", "expected_direction": "Match the flag silhouette and fold edge.", "evidence_class": "exact", "baseline_candidate": "demo/baseline-before-final-rim.png"}
+  ],
+  "iterations": [
+    {
+      "id": "round-4-final-rim",
+      "baseline_candidate_sha256": "3cfdf295734438fc9730c738c9694f17358ff3cdb882a699eda79619d171d240",
+      "current_candidate_sha256": "8f359b0b763cce3bd75d3c3d4ef12490625f525d322788b4e3f2aefc6b63b38f",
+      "decision": "Build an outer ring around the union of the yellow curve, bridge layer, and true-alpha calendar; keep internal seams and the left concave opening unpainted.",
+      "strict_pixel_passed": false,
+      "full_component_mae": 5.458677,
+      "reason": "The structural fix is present, but source-composited rim pixels and missing original font/vector layers prevent a strict pixel pass."
+    }
+  ]
+}

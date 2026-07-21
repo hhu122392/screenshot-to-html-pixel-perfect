@@ -1,0 +1,21 @@
+{
+  "url": "http://127.0.0.1:4198/?audit=1",
+  "viewport": {"width": 1179, "height": 2556},
+  "scenarios": [
+    {
+      "id": "close-by-button",
+      "steps": [{"action": "click", "selector": ".close-button"}],
+      "assertions": [{"type": "hidden", "selector": ".popup-shell"}]
+    },
+    {
+      "id": "close-by-escape",
+      "steps": [{"action": "press", "selector": "body", "key": "Escape"}],
+      "assertions": [{"type": "hidden", "selector": ".popup-shell"}]
+    },
+    {
+      "id": "toggle-reminder",
+      "steps": [{"action": "click", "selector": ".reminder-toggle"}],
+      "assertions": [{"type": "attribute", "selector": ".reminder-toggle", "name": "aria-checked", "value": "false"}]
+    }
+  ]
+}
