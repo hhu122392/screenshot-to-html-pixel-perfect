@@ -22,5 +22,4 @@ Preserve source RGB. Create or repair only the Alpha mask. A model-generated rep
 - The manifest states `checkerboard_used: false`.
 - White and navy QA sheets exist.
 
-`source_composited: true` may document that the source screenshot already contains background color in translucent pixels. It does not permit replacing Alpha with an opaque background.
-
+`source_composited: true` may document that the source screenshot already contains background color in translucent pixels. It does not permit replacing Alpha with an opaque background. If foreground RGB, Alpha, and the covered background are not independently known, classify the region as `non_identifiable`; Alpha validation cannot turn one composite observation into a unique transparent asset.

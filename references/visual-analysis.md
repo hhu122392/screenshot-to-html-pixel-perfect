@@ -16,7 +16,9 @@ Record evidence for every item before implementation:
 
 ## Evidence files
 
-Create the bilingual `REFERENCE_VISUAL_TEARDOWN` pair and populate `REFERENCE_BASELINE.json` plus `REFERENCE_COVERAGE.json`. Define source-space bounding boxes in `AUDIT_MAP.json`; do not estimate CSS dimensions from a scaled screenshot.
+Create the bilingual `REFERENCE_VISUAL_TEARDOWN` pair and populate `REFERENCE_BASELINE.json`, `REFERENCE_COVERAGE.json`, and `VISUAL_MODEL.json`. Define source-space bounding boxes in `AUDIT_MAP.json`; do not estimate CSS dimensions from a scaled screenshot.
+
+Before code, model layer owners, z-order, clip owners, protrusions, outer-contour members, openings, and internal seams. A visible line is not enough evidence to choose `fill`, `stroke`, `outer_ring`, or `shadow`; record the source-proven primitive and the contour members it applies to.
 
 ## Coverage and unknowns
 
@@ -37,4 +39,6 @@ For scrollable content, also write `CONTENT_REACHABILITY.json`. Record the scrol
 
 ## Baseline freeze
 
-Freeze dynamic values, fonts, locale, device scale factor, scroll position, and animation time for comparison. Record every freeze control in the implementation baseline.
+Freeze dynamic values, fonts, locale, device scale factor, scroll position, animation time, reference hash, audit-map hash, scope-mask hash, and relevant asset hashes. Record every freeze control in the implementation baseline and `ITERATION_LEDGER.json`.
+
+Whenever the user marks a discrepancy, register its source-space box and capture the before-state candidate before editing. Preserve the old core scope when adding a new audit region.

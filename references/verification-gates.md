@@ -2,7 +2,11 @@
 
 ## Evidence order
 
-Verify in this order: source facts, reference coverage, DOM/raster boundary, asset integrity, content reachability, browser runtime, full image, regions, elements, interactions, responsive cases, frames, final delivery. A later pass never cancels an earlier failure. In particular, a pixel pass never cancels a coverage, structure, or reachability failure.
+Verify in this order: source facts, evidence sufficiency, reference coverage, layer topology, DOM/raster boundary, asset integrity, content reachability, browser runtime, full image, regions, elements, iteration deltas, transparency matrix, interactions, responsive cases, frames, final delivery. A later pass never cancels an earlier failure. In particular, a pixel pass never cancels a coverage, topology, structure, or reachability failure.
+
+## Evidence sufficiency and topology
+
+Run `validate_visual_model.py` before implementation. Every protruding layer, clip owner, outer-contour member, opening, and excluded internal seam must be explicit. A `source_composited` or `non_identifiable` region must set `strict_pixel_gate: false` in the audit map and must block a strict 1:1 delivery. Multi-background captures prove candidate transparency behavior but do not recover unknown source Alpha.
 
 ## Reference coverage
 
@@ -22,7 +26,11 @@ For equally sized RGB images, calculate the mean of `abs(reference - candidate)`
 
 ## Audit map
 
-Register every major section and every identity-bearing, actionable, or high-contrast element. Boxes use source coordinates `[left, top, right, bottom]` and must remain within source bounds.
+Register every major section and every identity-bearing, actionable, high-contrast, user-marked, protruding, or contour-connection region. Boxes use source coordinates `[left, top, right, bottom]` and must remain within source bounds. Freeze `version`, `scope_id`, and the audit-map hash. When scope expands, preserve a comparable core-scope report.
+
+## Iteration proof
+
+For a correction pass, capture the current implementation before editing and run `run_visual_audits.py --baseline-candidate`. Target regions must improve or already pass. Guard regions must stay within their declared regression budget. Reference, candidate dimensions, audit map, scope mask, fonts, assets, and viewport must stay frozen; otherwise report a new scope instead of a trend.
 
 ## Interaction proof
 
@@ -32,4 +40,4 @@ Record scenario name, viewport, starting URL/state, steps, assertions, screensho
 
 Run `validate_delivery.py` over every required report, including reference coverage and content reachability when applicable. Set `passed: false` for a missing report, failed report, P0/P1 issue, unsupported full-component claim, unreachable content, dropped frame, fake transparency, or unhandled browser error.
 
-Report exact metrics and unrun checks. Never substitute “visually similar,” “close enough,” or an unmeasured screenshot montage for evidence.
+Report exact metrics, signed iteration deltas, scope hashes, evidence-limited regions, and unrun checks. Never substitute “visually similar,” “close enough,” or an unmeasured screenshot montage for evidence. Stop tuning and report the limitation when the available evidence cannot distinguish a unique correct result.

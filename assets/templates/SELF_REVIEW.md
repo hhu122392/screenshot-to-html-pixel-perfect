@@ -5,6 +5,8 @@
 - Static references inventoried:
 - Motion clips fully decoded:
 - Regions and key elements registered:
+- User-marked feedback regions and baseline candidates registered:
+- `VISUAL_MODEL.json` layers, protrusions, contours, and evidence limitations:
 - Interactions registered:
 - Live text and repeated collections registered in the structure audit:
 - `REFERENCE_COVERAGE.json` scope and unresolved evidence:
@@ -14,6 +16,8 @@
 
 - Exact commands and exit codes:
 - Full / region / element metrics:
+- Target / guard iteration deltas and regression failures:
+- Transparency-matrix backgrounds and distinct captures:
 - Compared motion frame count:
 - Alpha failures and source-RGB mismatch count:
 - Structure-boundary failures and unapproved large rasters:
@@ -26,6 +30,8 @@
 - No section/card screenshot carrying reusable UI:
 - No raster asset containing live text or state:
 - No fake transparency:
+- No protruding layer omitted from the outer contour or clipped by the wrong owner:
+- No cross-scope metric presented as a comparable trend:
 - No silent frame drop:
 - No unrun check reported as passed:
 - No hidden content invented or clipped fragment claimed as reusable:
