@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "core_scope": {
+    "id": "core-v1",
+    "reference_sha256": "replace-with-reference-hash",
+    "audit_map_sha256": "replace-with-audit-map-hash",
+    "scope_mask_sha256": null
+  },
+  "feedback_regions": [],
+  "iterations": []
+}

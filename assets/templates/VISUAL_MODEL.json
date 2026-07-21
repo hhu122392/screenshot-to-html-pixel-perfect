@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "source": "reference.png",
+  "component_id": "replace-with-component-id",
+  "evidence_limitations": [],
+  "layers": [
+    {
+      "id": "component-surface",
+      "kind": "dom",
+      "owner": "stage",
+      "z_order": 1,
+      "clip_owner": null,
+      "protrudes": false,
+      "outer_contour_role": "member",
+      "compositing": "opaque"
+    }
+  ],
+  "contours": [
+    {
+      "id": "component-outer-contour",
+      "members": ["component-surface"],
+      "primitive": "outer_ring",
+      "openings": [],
+      "internal_seams_excluded": []
+    }
+  ]
+}

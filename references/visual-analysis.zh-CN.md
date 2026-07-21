@@ -16,7 +16,9 @@
 
 ## 证据文件
 
-创建中英文 `REFERENCE_VISUAL_TEARDOWN` 文档，并填写 `REFERENCE_BASELINE.json` 和 `REFERENCE_COVERAGE.json`。在 `AUDIT_MAP.json` 中使用源图坐标定义区域，禁止从缩放后的截图猜 CSS 尺寸。
+创建中英文 `REFERENCE_VISUAL_TEARDOWN` 文档，并填写 `REFERENCE_BASELINE.json`、`REFERENCE_COVERAGE.json` 和 `VISUAL_MODEL.json`。在 `AUDIT_MAP.json` 中使用源图坐标定义区域，禁止从缩放后的截图猜 CSS 尺寸。
+
+写代码前登记图层所属、层级、裁切归属、凸出关系、最外轮廓成员、开口和内部接缝。只看到一条边不代表可以直接选择 `fill`、`stroke`、`outer_ring` 或 `shadow`；必须记录源图能证明的图形方式及其轮廓成员。
 
 ## 覆盖范围与未知项
 
@@ -37,4 +39,6 @@
 
 ## 基线冻结
 
-比较时固定动态值、字体、语言、设备缩放比、滚动位置和动画时间。所有冻结方式都要记录在实现基线中。
+比较时固定动态值、字体、语言、设备缩放比、滚动位置、动画时间、参考图哈希、审计地图哈希、范围蒙版哈希和相关素材哈希。所有冻结方式都要记录在实现基线和 `ITERATION_LEDGER.json` 中。
+
+用户标记差异后，改代码前先登记源坐标框并截取修改前候选图。增加新审计区域时保留旧的核心范围。

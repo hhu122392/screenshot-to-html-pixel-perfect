@@ -9,7 +9,16 @@
 
 ## Layer map
 
-List each DOM/CSS layer, isolated artwork asset, z-index, source bounding box, and interaction owner. For every repeated row, state the data source and renderer.
+Summarize `VISUAL_MODEL.json`: each DOM/CSS/SVG/raster/effect layer, owner, z-index, source box, clip owner, protrusion, outer-contour role, compositing class, and interaction owner. For every repeated row, state the data source and renderer.
+
+## Frozen comparison identity
+
+- Core scope ID:
+- Reference SHA-256:
+- Audit-map SHA-256:
+- Scope-mask SHA-256:
+- Font and relevant asset SHA-256 values:
+- Evidence-limited region IDs:
 
 ## DOM/raster boundary
 
@@ -20,7 +29,7 @@ List each DOM/CSS layer, isolated artwork asset, z-index, source bounding box, a
 
 ## Deterministic audit state
 
-Record fixed time, data, locale, fonts, query parameters, scroll position, and animation clock.
+Record fixed time, data, locale, fonts, query parameters, viewport, scroll position, and animation clock.
 
 ## Scroll contract
 

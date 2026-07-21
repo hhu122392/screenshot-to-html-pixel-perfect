@@ -1,4 +1,4 @@
 interface:
   display_name: "Screenshot to HTML Pixel Perfect"
-  short_description: "Rebuild screenshots and recordings with pixel evidence"
-  default_prompt: "Use $screenshot-to-html-pixel-perfect to reconstruct this reference as audited vanilla HTML, CSS, and JavaScript."
+  short_description: "Rebuild and correct screenshot UIs with pixel evidence"
+  default_prompt: "Use $screenshot-to-html-pixel-perfect to reconstruct or correct this reference with audited layers, transparency, and pixel evidence."

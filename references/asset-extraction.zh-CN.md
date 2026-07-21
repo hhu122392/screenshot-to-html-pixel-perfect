@@ -22,5 +22,4 @@
 - 清单明确记录 `checkerboard_used: false`。
 - 白底和深蓝底检查图存在。
 
-`source_composited: true` 只能说明源截图的半透明像素已经混入背景色，不能把不透明背景当 Alpha 使用。
-
+`source_composited: true` 只能说明源截图的半透明像素已经混入背景色，不能把不透明背景当 Alpha 使用。如果前景 RGB、Alpha 和被遮挡背景都没有独立证据，必须把区域标记为 `non_identifiable`；Alpha 检查不能把一次合成观察变成唯一透明素材。
