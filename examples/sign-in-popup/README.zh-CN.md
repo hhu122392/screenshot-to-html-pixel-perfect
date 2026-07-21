@@ -6,7 +6,11 @@
 
 > 审计结论：结构、Alpha、交互和响应式通过；严格像素门槛未通过。弹窗审计裁图 MAE 为 `5.458677`，高于 `<2` 门槛。本案例用于展示可复现实现、问题复盘和证据边界，不宣称严格 1:1 完成。
 
-![签到弹窗移动端演示](demo/mobile-preview.png)
+| 原始截图 | 本 SKILL 实现 |
+|---|---|
+| <img src="demo/reference-full.png" alt="签到弹窗原始截图" width="390"> | <img src="demo/mobile-preview.png" alt="本 SKILL 实现的签到弹窗" width="390"> |
+
+左侧保留完整原图作为来源证据；右侧只实现签到弹窗，背景使用中性灰舞台。
 
 ## 本地运行
 
